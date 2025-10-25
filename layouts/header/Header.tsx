@@ -69,24 +69,12 @@ const Header = () => {
             as={"ul"}
             className="d-flex align-items-center mb-0 gap-2"
           >
-<<<<<<< HEAD
-            
-
-           
-=======
-
->>>>>>> fa7e5f5 (login auth completed)
             <ListGroup.Item as="li">
               <UserMenu />
             </ListGroup.Item>
           </ListGroup>
         </Container>
       </Navbar>
-<<<<<<< HEAD
-     
-=======
-
->>>>>>> fa7e5f5 (login auth completed)
       {isTablet && <OffcanvasSidebar />}
     </Fragment>
   );
