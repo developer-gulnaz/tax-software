@@ -101,7 +101,7 @@ const NoficationList: React.FC<NotificationProps> = ({ isOpen, onClose }) => {
                       <div className="d-flex gap-4 align-items-center">
                         <Avatar
                           type="image"
-                          src="/images/avatar/avatar-1.jpg"
+                          src="/images/avatar/avatar-15.jpg"
                           size="md"
                           className="rounded-circle"
                         />
@@ -409,7 +409,7 @@ const NoficationList: React.FC<NotificationProps> = ({ isOpen, onClose }) => {
                       <div className="d-flex gap-4 align-items-center">
                         <Avatar
                           type="image"
-                          src="/images/avatar/avatar-1.jpg"
+                          src="/images/avatar/avatar-15.jpg"
                           size="md"
                           className="rounded-circle"
                         />

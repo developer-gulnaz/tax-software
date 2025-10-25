@@ -59,13 +59,13 @@ export const teamMembers: TeamsProps[] = [
   {
     name: "John Doe",
     role: "Project Manager",
-    avatar: "/images/avatar/avatar-1.jpg",
+    avatar: "/images/avatar/avatar-15.jpg",
     tasksAssigned: 2,
   },
   {
     name: "Jane Smith",
     role: "Developer",
-    avatar: "/images/avatar/avatar-14.jpg",
+    avatar: "/images/avatar/avatar-154.jpg",
     tasksAssigned: 2,
   },
   {
@@ -75,7 +75,7 @@ export const teamMembers: TeamsProps[] = [
     tasksAssigned: 3,
   },
   {
-    name: "Jitu Chauhan",
+    name: "username",
     role: "Designer",
     avatar: "/images/avatar/avatar-6.jpg",
     tasksAssigned: 8,
@@ -89,7 +89,7 @@ export const teamMembers: TeamsProps[] = [
   {
     name: "Manasvi Suthar",
     role: "UI Developer",
-    avatar: "/images/avatar/avatar-11.jpg",
+    avatar: "/images/avatar/avatar-151.jpg",
     tasksAssigned: 3,
   },
 ];

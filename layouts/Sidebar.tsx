@@ -1,5 +1,5 @@
 "use client";
-//import node module libraries
+import useAdmin from "hooks/useAdmin";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { Fragment } from "react";
@@ -25,7 +25,8 @@ interface SidebarProps {
 }
 const Sidebar: React.FC<SidebarProps> = ({ hideLogo = false, containerId }) => {
   const location = usePathname();
-
+  const admin = useAdmin();
+  
   //Generate Link
   const generateLink = (item: MenuItemType) => {
     return (
@@ -55,7 +56,7 @@ const Sidebar: React.FC<SidebarProps> = ({ hideLogo = false, containerId }) => {
               href="/"
               className="d-none d-md-flex align-items-center gap-2"
             >
-              <span className="fw-bold fs-4 site-logo-text">Gram Panchayat</span>
+              <span className="fw-bold fs-4 site-logo-text">{admin?.gramPanchayat || "Gram Panchayat"}</span>
             </Link>
           </div>
         )}
@@ -163,12 +164,11 @@ const Sidebar: React.FC<SidebarProps> = ({ hideLogo = false, containerId }) => {
                                                                 menuLevel3Item.link?.toString() ||
                                                                 `/${menuLevel3Item.link}`
                                                               }
-                                                              className={`nav-link ${
-                                                                location ===
+                                                              className={`nav-link ${location ===
                                                                 `/${menuLevel3Item.link}`
-                                                                  ? "active"
-                                                                  : ""
-                                                              }`}
+                                                                ? "active"
+                                                                : ""
+                                                                }`}
                                                             >
                                                               {
                                                                 menuLevel3Item.name
@@ -214,11 +214,10 @@ const Sidebar: React.FC<SidebarProps> = ({ hideLogo = false, containerId }) => {
                                 {/* first level menu items */}
                                 <Link
                                   href={`/${menuLevel1Item?.link}`}
-                                  className={`nav-link ${
-                                    location === `/${menuLevel1Item.link}`
-                                      ? "active"
-                                      : ""
-                                  }`}
+                                  className={`nav-link ${location === `/${menuLevel1Item.link}`
+                                    ? "active"
+                                    : ""
+                                    }`}
                                 >
                                   {menuLevel1Item.name}
                                 </Link>
@@ -237,9 +236,8 @@ const Sidebar: React.FC<SidebarProps> = ({ hideLogo = false, containerId }) => {
                   <Nav.Item as="li" key={index}>
                     <Link
                       href={menu.link ? `${menu.link}` : "#"}
-                      className={`nav-link ${
-                        location === menu.link ? "active" : ""
-                      }`}
+                      className={`nav-link ${location === menu.link ? "active" : ""
+                        }`}
                     >
                       <span className="nav-icon">{menu.icon}</span>
                       <span className="text">{menu.title}</span>
@@ -249,7 +247,6 @@ const Sidebar: React.FC<SidebarProps> = ({ hideLogo = false, containerId }) => {
               }
             }
           })}
-          
         </Accordion>
       </div>
     </div>

@@ -3,6 +3,7 @@ import {
   IconArrowLeftBar,
   IconFile,
   IconFiles,
+  IconLogin2,
   IconNews,
   IconShoppingBag
 } from "@tabler/icons-react";
@@ -63,6 +64,6 @@ export const DashboardMenu: MenuItemType[] = [
     id: uuid(),
     title: "आउट",
     link: "/logout",
-    icon: <IconArrowLeftBar size={20} strokeWidth={1.5} />,
+    icon: <IconLogin2 size={20} strokeWidth={1.5} />,
   },
 ];

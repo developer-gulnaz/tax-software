@@ -1,18 +1,28 @@
-//import node module libraries
-import { Metadata } from "next";
-import { Fragment } from "react";
-import { Col, Row } from "react-bootstrap";
+"use client";
+import { Fragment, useEffect } from "react";
+import { useRouter } from "next/navigation";
+import { Row, Col } from "react-bootstrap";
 
-//import custom components
+// import custom components
 import DashboardStats from "components/dashboard/DashboardStats";
 import TaskProgress from "components/dashboard/TaskProgress";
 
-export const metadata: Metadata = {
-  title: "Project Dashboard | Dasher - Responsive Bootstrap 5 Admin Dashboard",
-  description: "Dasher - Responsive Bootstrap 5 Admin Dashboard",
-};
-
 const HomePage = () => {
+  const router = useRouter();
+
+  // Redirect if not logged in
+  useEffect(() => {
+    const admin = sessionStorage.getItem("admin");
+    if (!admin) {
+      router.push("/sign-in");
+    }
+  }, [router]);
+
+  // Set page title
+  useEffect(() => {
+    document.title = "Dashboard";
+  }, []);
+
   return (
     <Fragment>
       <Row className="g-6 mb-6">

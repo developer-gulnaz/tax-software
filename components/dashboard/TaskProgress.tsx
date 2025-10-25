@@ -12,7 +12,7 @@ const TaskProgress = () => {
     <Card className="card-lg mb-6">
       <CardBody>
         <div className="mb-4">
-          <h5 className="mb-0">Task Progress</h5>
+          <h5 className="mb-0">कार्य प्रगति</h5>
         </div>
         <div className="fs-1 fw-bold mb-3">64%</div>
         <div className="d-flex align-items-center gap-1 w-100 mb-4">
@@ -28,6 +28,17 @@ const TaskProgress = () => {
             24%
           </div>
           <div className="w-50">
+            <DasherTippy content="Pending">
+              <CustomProgressBar
+                className="mb-2"
+                now={100}
+                style={{ height: "3px" }}
+                variant="warning-light"
+              />
+            </DasherTippy>
+            30%
+          </div>
+          <div className="w-50">
             <DasherTippy content="In Progress">
               <CustomProgressBar
                 className="mb-2"
@@ -36,9 +47,9 @@ const TaskProgress = () => {
                 variant="success-light"
               />
             </DasherTippy>
-            35%
+            25%
           </div>
-          <div className="w-75">
+          <div className="w-50">
             <DasherTippy content="Up Coming">
               <CustomProgressBar
                 className="mb-2"
@@ -47,7 +58,7 @@ const TaskProgress = () => {
                 variant="danger-light"
               />
             </DasherTippy>
-            41%
+            30%
           </div>
         </div>
         <div className="bg-gray-100 p-3 rounded-4">
@@ -60,7 +71,7 @@ const TaskProgress = () => {
                   </div>
                   <div className="lh-1 mt-4">
                     <div className="fs-4 fw-bold mb-1">555</div>
-                    <div className="text-secondary small">मूल्यांकन</div>
+                    <div className="text-secondary fw-bold small">मूल्यांकन</div>
                   </div>
                 </CardBody>
               </Card>
@@ -68,12 +79,12 @@ const TaskProgress = () => {
             <Col md={3}>
               <Card className="card-lg">
                 <CardBody className="text-center p-3">
-                  <div className="icon-shape icon-lg bg-info-subtle text-info-emphasis rounded-pill">
+                  <div className="icon-shape icon-lg bg-warning-subtle text-info-emphasis rounded-pill">
                     <IconCircleCheck size={20} />
                   </div>
                   <div className="lh-1 mt-4">
                     <div className="fs-4 fw-bold mb-1">98988</div>
-                    <div className="text-secondary small">मागणी</div>
+                    <div className="text-secondary fw-bold small">मागणी</div>
                   </div>
                 </CardBody>
               </Card>
@@ -86,7 +97,7 @@ const TaskProgress = () => {
                   </div>
                   <div className="lh-1 mt-4">
                     <div className="fs-4 fw-bold mb-1">180982</div>
-                    <div className="text-secondary small">वसूली</div>
+                    <div className="text-secondary fw-bold small">वसूली</div>
                   </div>
                 </CardBody>
               </Card>
@@ -99,7 +110,7 @@ const TaskProgress = () => {
                   </div>
                   <div className="lh-1 mt-4">
                     <div className="fs-4 fw-bold mb-1">845549</div>
-                    <div className="text-secondary small">थकबाकी</div>
+                    <div className="text-secondary fw-bold small">थकबाकी</div>
                   </div>
                 </CardBody>
               </Card>
